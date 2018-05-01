@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--System-->
+    <color name="colorPrimary">#6edfa3</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#6edfa3</color>
+    <color name="applicationColor">#fff</color>
+    <color name="default_page">#f7f7f7</color>
+    <!--MY-->
+    <color name="white">#FFFFFF</color>
+    <color name="tabnosel">#ffffff</color>
+    <color name="gray_dfdfdf">#dfdfdf</color>
+    <color name="tab_textColor">#8A8A8A</color>
+    <color name="textColor_black">#FF172733</color>
+    <color name="welcome_tvbg">#ae707070</color>
+    <!--BottomBar-->
+    <color name="tab_index_bg">#f12222</color>
+    <color name="tab_news_bg">#1e17dd</color>
+    <color name="tab_img_bg">#ffca39</color>
+    <color name="tab_videos_bg">#1ce115</color>
+</resources>

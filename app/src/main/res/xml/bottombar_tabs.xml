@@ -1,0 +1,27 @@
+<tabs>
+    <tab
+        id="@+id/tab_index"
+        title="首页"
+        icon = "@mipmap/tab_homebg"
+        barColorWhenSelected="@color/tab_index_bg"
+         />
+    <tab
+        id="@+id/tab_news"
+        title="新闻"
+        icon = "@mipmap/tab_newsbg"
+        barColorWhenSelected="@color/tab_news_bg"
+         />
+    <tab
+        id="@+id/tab_img"
+        title="图片"
+        icon = "@mipmap/tab_imgbg"
+        barColorWhenSelected="@color/tab_img_bg"
+         />
+    <tab
+        id="@+id/tab_videos"
+        title="视频"
+        icon = "@mipmap/tab_videobg"
+        barColorWhenSelected="@color/tab_videos_bg"
+         />
+
+</tabs>
