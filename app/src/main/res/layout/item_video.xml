@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/x8"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x220"
+        android:padding="@dimen/x10">
+
+        <ImageView
+            android:id="@+id/iv_video"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/x200"
+            android:background="@mipmap/banner1" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_video"
+            android:layout_alignRight="@+id/iv_video"
+            android:background="@drawable/btn_shap_time"
+            android:text="02:28"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_toRightOf="@id/iv_video"
+            android:text="标题标题标题标题标题标题"
+            android:textColor="@color/textColor_black" />
+
+        <ImageView
+            android:id="@+id/iv_tag"
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/x30"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_below="@+id/tv_video_title"
+            android:layout_marginTop="@dimen/x50"
+            android:layout_toRightOf="@id/iv_video"
+            android:background="@mipmap/tag" />
+
+        <TextView
+            android:id="@+id/tv_video_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_alignTop="@+id/iv_tag"
+            android:layout_toRightOf="@id/iv_tag"
+            android:textSize="11sp"
+            android:text="标签标签标签标签标签标签标签" />
+
+        <ImageView
+            android:id="@+id/iv_collection"
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/x30"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_toRightOf="@id/iv_video"
+            android:src="@mipmap/collection" />
+
+        <TextView
+            android:id="@+id/tv_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_collection"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_toRightOf="@id/iv_collection"
+            android:text="222" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/x30"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_toRightOf="@id/tv_collection"
+            android:src="@mipmap/share" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_collection"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_toRightOf="@id/iv_share"
+            android:text="333" />
+
+        <ImageView
+            android:id="@+id/iv_reply"
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/x30"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/x50"
+            android:layout_toRightOf="@id/tv_share"
+            android:src="@mipmap/reply" />
+
+        <TextView
+            android:id="@+id/tv_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_collection"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_toRightOf="@id/iv_reply"
+            android:text="666" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -11,7 +11,7 @@ import com.example.mengh.test.test.ProgressObserver
  * Author by HDM, Email menghedianmo@163.com, Date on 2018/4/10.
  * PS: Not easy to write code, please indicate.
  */
-class ImgListPresenter(private val view: ImgListContract.view, private val context: BaseActivity) : ImgListContract.presenter {
+class ImgListPresenter(private val view: ImgListContract.view, private val context: BaseActivity) :ImgListContract.presenter{
 
     override fun getImgList(page: Int, pagenum: Int, tag: String) {
         val listener = object : ObserverOnNextListener<ImageListBean> {

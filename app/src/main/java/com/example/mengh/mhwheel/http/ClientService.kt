@@ -2,6 +2,7 @@ package com.example.mengh.test
 
 import com.example.mengh.mhwheel.image.bean.ImageListBean
 import com.example.mengh.mhwheel.news.bean.NewsBean
+import com.example.mengh.mhwheel.videos.bean.VideoListBean
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -22,4 +23,8 @@ interface ClientService {
     //获取图片集合
     @GET("listjson")
     fun getImgList(@Query("pn") page: Int, @Query("rn") pagenum: Int, @Query("tag1") tag: String): Observable<ImageListBean>
+
+    //获取视频集合
+    @GET("v4/discovery/hot")
+    fun getVideoList(@Query("pn") page: Int): Observable<VideoListBean>
 }

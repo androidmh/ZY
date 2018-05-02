@@ -9,7 +9,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.mengh.mhwheel"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -25,7 +25,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -44,7 +44,7 @@ dependencies {
     //cardview
     implementation "com.android.support:cardview-v7:$rootProject.ext.supportVersion"
     //轮播
-    implementation "com.bigkoo:convenientbanner:$rootProject.ext.bannerVersion"
+    implementation "com.youth.banner:banner:$rootProject.ext.bannerVersion"
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
     //gsonadapter
@@ -60,4 +60,6 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:$rootProject.ext.glideVersion"
     //searchview
     implementation "com.github.arimorty:floatingsearchview:$rootProject.ext.searchViewVersion"
+    //videoplayer
+    implementation "cn.jzvd:jiaozivideoplayer:$rootProject.ext.videoplayerVersion"
 }

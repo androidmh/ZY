@@ -3,6 +3,7 @@ package com.example.mengh.test
 
 import com.example.mengh.mhwheel.image.bean.ImageListBean
 import com.example.mengh.mhwheel.news.bean.NewsBean
+import com.example.mengh.mhwheel.videos.bean.VideoListBean
 import com.example.mengh.test.test.DMObserver
 import com.example.mengh.test.test.ProgressObserver
 import io.reactivex.Observable
@@ -47,5 +48,9 @@ object ClientMethods {
     //加载更多图片
     fun getImgLoadmore(observer: DMObserver<ImageListBean>, page: Int, pagenum: Int, tag: String) {
         ApiSubscribe(Client.getClient(2).getImgList(page,pagenum,tag), observer)
+    }
+    //加载更多图片
+    fun getVideoList(observer: ProgressObserver<VideoListBean>, page: Int) {
+        ApiSubscribe(Client.getClient(3).getVideoList(page), observer)
     }
 }

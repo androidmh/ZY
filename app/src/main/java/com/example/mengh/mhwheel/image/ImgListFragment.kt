@@ -14,7 +14,7 @@ import com.example.mengh.mhwheel.image.view.ImgDialogFragment
 import kotlinx.android.synthetic.main.fragment_imglist.*
 
 
-class ImgListFragment : LazyLoadFragment(), ImgListContract.view {
+class ImgListFragment : LazyLoadFragment(),ImgListContract.view{
     //presenter
     lateinit var imgListPresenter: ImgListPresenter
     //页码

@@ -3,14 +3,12 @@ package com.example.mengh.mhwheel.index
 import android.content.Context
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.mengh.mhwheel.R
 import com.example.mengh.mhwheel.base.BaseFragment
 import com.example.mengh.mhwheel.index.adapter.IndexAdapter
 import com.example.mengh.mhwheel.index.bean.IndexBean
 import com.example.mengh.mhwheel.index.item.IndexItem
 import kotlinx.android.synthetic.main.fragment_index.*
-import kotlinx.android.synthetic.main.item_index_vp.*
 
 
 /**

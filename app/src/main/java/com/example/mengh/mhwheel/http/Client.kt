@@ -2,9 +2,7 @@ package com.example.mengh.test
 
 import com.example.mengh.mhwheel.base.Constant
 import com.example.mengh.mhwheel.http.BasicParamsInterceptor
-import com.example.mengh.mhwheel.news.bean.NewsBean
 import com.example.mengh.mhwheel.utils.Md5Utils
-import com.example.mengh.test.test.ProgressObserver
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -29,6 +27,8 @@ class Client {
                 baseUrl = "https://api.xinwen.cn/news/"
             } else if (type == 2){
                 baseUrl = "http://image.baidu.com/channel/"
+            }else if (type == 3){
+                baseUrl = "http://baobab.kaiyanapp.com/api/"
             }
             //时间戳
             var time = System.currentTimeMillis().toString()
