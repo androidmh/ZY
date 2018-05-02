@@ -15,7 +15,8 @@
             android:id="@+id/iv_video"
             android:layout_width="@dimen/x250"
             android:layout_height="@dimen/x200"
-            android:background="@mipmap/banner1" />
+            android:scaleType="fitXY"
+             />
 
         <TextView
             android:id="@+id/tv_time"
@@ -55,6 +56,7 @@
             android:layout_marginLeft="@dimen/x5"
             android:layout_alignTop="@+id/iv_tag"
             android:layout_toRightOf="@id/iv_tag"
+            android:singleLine="true"
             android:textSize="11sp"
             android:text="标签标签标签标签标签标签标签" />
 

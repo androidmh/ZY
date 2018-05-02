@@ -17,7 +17,7 @@
         android:layout_height="@dimen/x120"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
-        app:bb_activeTabColor="#fffff0"
+        app:bb_activeTabColor="#ffffff"
         app:bb_tabXmlResource="@xml/bottombar_tabs"
         app:bb_badgesHideWhenActive="true"
         app:bb_titleTextAppearance="@style/bottomTitleSize"

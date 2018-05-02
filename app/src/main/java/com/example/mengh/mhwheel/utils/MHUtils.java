@@ -37,6 +37,15 @@ public class MHUtils {
         return format;
     }
 
+    /**
+     * 秒转分+秒
+     */
+
+
+    public static String toMinute(int time){
+        String format = new SimpleDateFormat("mm:ss").format(new Date(time*1000));
+        return format;
+    }
     /*
     退出app
      */

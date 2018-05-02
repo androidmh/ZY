@@ -1,15 +1,22 @@
 package com.example.mengh.mhwheel.videos
 
 import android.content.Context
+import android.os.Bundle
+import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.mengh.mhwheel.R
 import com.example.mengh.mhwheel.base.BaseFragment
+import com.example.mengh.mhwheel.base.Constant.Companion.VIDEO_KEY
+import com.example.mengh.mhwheel.image.view.ImgDialogFragment
+import com.example.mengh.mhwheel.index.item.IndexItem
 import com.example.mengh.mhwheel.videos.adapter.VideoAdapter
 import com.example.mengh.mhwheel.videos.bean.VideoListBean
 import com.example.mengh.mhwheel.videos.item.VideoItem
 import com.example.mengh.mhwheel.videos.presenter.VideoContract
 import com.example.mengh.mhwheel.videos.presenter.VideoPresenter
+import kotlinx.android.synthetic.main.fragment_imglist.*
 import kotlinx.android.synthetic.main.fragment_videos.*
 
 
@@ -54,6 +61,20 @@ class VideoFragment : BaseFragment(), VideoContract.view {
         val layoutManager = LinearLayoutManager(mactivity)
         rv_video.layoutManager = layoutManager
         rv_video.adapter = adapter;
+        adapter.setOnItemClickListener(BaseQuickAdapter.OnItemClickListener { adapter, view, position ->
+            var bundle = Bundle()
+            var list: MutableList<String> = ArrayList()
+            for (playInfoBean in data[position].getData()!!.data.playInfo) {
+                list.add(playInfoBean.url)
+            }
+            bundle.putStringArrayList(VIDEO_KEY, list as java.util.ArrayList<String>?)
+            startActivityf(VideoActivity::class.java,bundle)
+        })
+
+        //下拉刷新
+        sl_video.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
+            videoPresenter.getVideoList(pagnum)
+        })
     }
 
     override fun showfailemsg(str: String) {

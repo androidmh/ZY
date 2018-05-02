@@ -14,8 +14,8 @@
     <color name="textColor_black">#FF172733</color>
     <color name="welcome_tvbg">#ae707070</color>
     <!--BottomBar-->
-    <color name="tab_index_bg">#f12222</color>
-    <color name="tab_news_bg">#1e17dd</color>
-    <color name="tab_img_bg">#ffca39</color>
-    <color name="tab_videos_bg">#1ce115</color>
+    <color name="tab_index_bg">#f7aeff</color>
+    <color name="tab_news_bg">#b9aeff</color>
+    <color name="tab_img_bg">#EEE685</color>
+    <color name="tab_videos_bg">#b2b2b2</color>
 </resources>

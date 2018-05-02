@@ -71,9 +71,9 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
         if (!isAllowScreenRoate) {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
+        initParms(bundle)
         initView(this!!.mContextView!!)
         setListener()
-        initParms(bundle)
         //为每一个Activity添加管理
         ActivityManagerUtils.getInstance().addActivity(this@BaseActivity)
 
