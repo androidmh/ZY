@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/x8"
-    app:cardElevation="5dp">
+    app:cardElevation="@dimen/x8">
 
     <RelativeLayout
+        android:background="@color/item_video_bg"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/x220"
-        android:padding="@dimen/x10">
+        android:padding="@dimen/x20">
 
         <ImageView
             android:id="@+id/iv_video"

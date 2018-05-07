@@ -1,10 +1,10 @@
 <tabs>
-    <tab
-        id="@+id/tab_index"
-        title="首页"
-        icon = "@mipmap/tab_homebg"
-        barColorWhenSelected="@color/tab_index_bg"
-         />
+    <!--<tab-->
+        <!--id="@+id/tab_index"-->
+        <!--title="首页"-->
+        <!--icon = "@mipmap/tab_homebg"-->
+        <!--barColorWhenSelected="@color/tab_index_bg"-->
+         <!--/>-->
     <tab
         id="@+id/tab_news"
         title="新闻"

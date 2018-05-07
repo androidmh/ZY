@@ -52,6 +52,7 @@ class NewsFragment : BaseFragment(), NewsContract.view, NewsContract.search {
         } else {
             setRecy(newsBean)
         }
+        sl_news.isRefreshing = false
     }
 
     /**
@@ -102,6 +103,7 @@ class NewsFragment : BaseFragment(), NewsContract.view, NewsContract.search {
             //处理搜索点击事件
             override fun onSearchAction(query: String) {
                 newsPresenter.getSearchKey(query, this@NewsFragment)
+                sl_news.isRefreshing = true
             }
         })
         //处理搜索栏聚焦与失焦的监听
@@ -123,7 +125,7 @@ class NewsFragment : BaseFragment(), NewsContract.view, NewsContract.search {
             }
         })
         //设置搜索栏启动后动态使recycleview向下移动
-        search_view.setOnSuggestionsListHeightChanged(FloatingSearchView.OnSuggestionsListHeightChanged { newHeight -> rv_news.setTranslationY(newHeight) })
+//        search_view.setOnSuggestionsListHeightChanged(FloatingSearchView.OnSuggestionsListHeightChanged { newHeight -> rv_news.setTranslationY(newHeight) })
     }
 
     private fun setRecy(news: MutableList<NewsBean.DataBean.News>) {
@@ -142,6 +144,7 @@ class NewsFragment : BaseFragment(), NewsContract.view, NewsContract.search {
     override fun showfailemsg(str: String) {
         mactivity!!.showToast(str, 1)
     }
+
     override fun getLists(isshow: Boolean) {
         if (isshow) {
             sl_news.isRefreshing = true

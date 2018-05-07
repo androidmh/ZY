@@ -1,8 +1,9 @@
 package com.example.mengh.mhwheel.videos.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class VideoListBean {
+public class VideoListBean implements Serializable{
 
     private int count;
     private int total;
@@ -50,7 +51,7 @@ public class VideoListBean {
         this.itemList = itemList;
     }
 
-    public static class ItemListBeanX {
+    public static class ItemListBeanX implements Serializable{
         /**
          * type : horizontalScrollCard
          * data : {"dataType":"HorizontalScrollCard","itemList":[{"type":"banner2","data":{"dataType":"Banner","id":796,"title":"","description":"","image":"http://img.kaiyanapp.com/2ca238dfc04292f5fb41c321ed1eb0b4.jpeg?imageMogr2/quality/60/format/jpg","actionUrl":"eyepetizer://webview/?title=%E7%94%B5%E5%BD%B1%E6%94%BE%E6%98%A0%E5%AE%A4&url=http%3A%2F%2Fwww.eyepetizer.net%2Farticle.html%3Fnid%3D1157%26udid%3D%26uid%3D0%26utm_source%3Ddiscovery","adTrack":null,"shade":false,"label":{"text":"","card":"","detail":null},"labelList":[],"header":{"id":0,"title":null,"font":null,"subTitle":null,"subTitleFont":null,"textAlign":"left","cover":null,"label":null,"actionUrl":null,"labelList":null,"icon":null,"description":null}},"tag":null,"id":0,"adIndex":-1},{"type":"banner2","data":{"dataType":"Banner","id":797,"title":"","description":"","image":"http://img.kaiyanapp.com/6f53184af84b428853d97e67eb250e40.jpeg?imageMogr2/quality/60/format/jpg","actionUrl":"eyepetizer://webview/?title=%E7%BE%8E%E5%89%A7%E6%94%BE%E6%98%A0%E5%AE%A4&url=http%3A%2F%2Fwww.eyepetizer.net%2Farticle.html%3Fnid%3D1156%26udid%3D%26uid%3D0%26utm_source%3Ddiscovery","adTrack":null,"shade":false,"label":{"text":"","card":"","detail":null},"labelList":[],"header":{"id":0,"title":null,"font":null,"subTitle":null,"subTitleFont":null,"textAlign":"left","cover":null,"label":null,"actionUrl":null,"labelList":null,"icon":null,"description":null}},"tag":null,"id":0,"adIndex":-1},{"type":"banner2","data":{"dataType":"Banner","id":696,"title":"","description":"","image":"http://img.kaiyanapp.com/cb4fa0f645bad89694a21dfae55f94fd.jpeg?imageMogr2/quality/60/format/jpg","actionUrl":"eyepetizer://webview/?title=2018%20FIRST%20%E5%BD%B1%E5%B1%95%E7%9F%AD%E7%89%87%E5%AD%A3&url=http%3A%2F%2Fwww.eyepetizer.net%2Farticle.html%3Fnid%3D1137%26shareable%3Dtrue","adTrack":null,"shade":false,"label":{"text":"","card":"","detail":null},"labelList":[],"header":{"id":0,"title":null,"font":null,"subTitle":null,"subTitleFont":null,"textAlign":"left","cover":null,"label":null,"actionUrl":null,"labelList":null,"icon":null,"description":null}},"tag":null,"id":0,"adIndex":-1}],"count":3}
@@ -61,7 +62,7 @@ public class VideoListBean {
 
         private String type;
         private DataBeanX data;
-        private Object tag;
+        private String tag;
         private int id;
         private int adIndex;
 
@@ -81,11 +82,11 @@ public class VideoListBean {
             this.data = data;
         }
 
-        public Object getTag() {
+        public String getTag() {
             return tag;
         }
 
-        public void setTag(Object tag) {
+        public void setTag(String tag) {
             this.tag = tag;
         }
 
@@ -105,7 +106,7 @@ public class VideoListBean {
             this.adIndex = adIndex;
         }
 
-        public static class DataBeanX {
+        public static class DataBeanX implements Serializable{
             /**
              * dataType : HorizontalScrollCard
              * itemList : [{"type":"banner2","data":{"dataType":"Banner","id":796,"title":"","description":"","image":"http://img.kaiyanapp.com/2ca238dfc04292f5fb41c321ed1eb0b4.jpeg?imageMogr2/quality/60/format/jpg","actionUrl":"eyepetizer://webview/?title=%E7%94%B5%E5%BD%B1%E6%94%BE%E6%98%A0%E5%AE%A4&url=http%3A%2F%2Fwww.eyepetizer.net%2Farticle.html%3Fnid%3D1157%26udid%3D%26uid%3D0%26utm_source%3Ddiscovery","adTrack":null,"shade":false,"label":{"text":"","card":"","detail":null},"labelList":[],"header":{"id":0,"title":null,"font":null,"subTitle":null,"subTitleFont":null,"textAlign":"left","cover":null,"label":null,"actionUrl":null,"labelList":null,"icon":null,"description":null}},"tag":null,"id":0,"adIndex":-1},{"type":"banner2","data":{"dataType":"Banner","id":797,"title":"","description":"","image":"http://img.kaiyanapp.com/6f53184af84b428853d97e67eb250e40.jpeg?imageMogr2/quality/60/format/jpg","actionUrl":"eyepetizer://webview/?title=%E7%BE%8E%E5%89%A7%E6%94%BE%E6%98%A0%E5%AE%A4&url=http%3A%2F%2Fwww.eyepetizer.net%2Farticle.html%3Fnid%3D1156%26udid%3D%26uid%3D0%26utm_source%3Ddiscovery","adTrack":null,"shade":false,"label":{"text":"","card":"","detail":null},"labelList":[],"header":{"id":0,"title":null,"font":null,"subTitle":null,"subTitleFont":null,"textAlign":"left","cover":null,"label":null,"actionUrl":null,"labelList":null,"icon":null,"description":null}},"tag":null,"id":0,"adIndex":-1},{"type":"banner2","data":{"dataType":"Banner","id":696,"title":"","description":"","image":"http://img.kaiyanapp.com/cb4fa0f645bad89694a21dfae55f94fd.jpeg?imageMogr2/quality/60/format/jpg","actionUrl":"eyepetizer://webview/?title=2018%20FIRST%20%E5%BD%B1%E5%B1%95%E7%9F%AD%E7%89%87%E5%AD%A3&url=http%3A%2F%2Fwww.eyepetizer.net%2Farticle.html%3Fnid%3D1137%26shareable%3Dtrue","adTrack":null,"shade":false,"label":{"text":"","card":"","detail":null},"labelList":[],"header":{"id":0,"title":null,"font":null,"subTitle":null,"subTitleFont":null,"textAlign":"left","cover":null,"label":null,"actionUrl":null,"labelList":null,"icon":null,"description":null}},"tag":null,"id":0,"adIndex":-1}]
@@ -485,7 +486,7 @@ public class VideoListBean {
                 this.subtitles = subtitles;
             }
 
-            public static class ConsumptionBean {
+            public static class ConsumptionBean implements Serializable{
                 /**
                  * collectionCount : 852
                  * shareCount : 541
@@ -521,7 +522,7 @@ public class VideoListBean {
                 }
             }
 
-            public static class ProviderBean {
+            public static class ProviderBean implements Serializable{
                 /**
                  * name : 投稿
                  * alias : PGC2
@@ -557,7 +558,7 @@ public class VideoListBean {
                 }
             }
 
-            public static class AuthorBean {
+            public static class AuthorBean implements Serializable{
                 /**
                  * id : 2763
                  * icon : http://img.kaiyanapp.com/a19402fd060bf1bb4904195a197ad278.png?imageMogr2/quality/60/format/jpg
@@ -682,7 +683,7 @@ public class VideoListBean {
                     this.ifPgc = ifPgc;
                 }
 
-                public static class FollowBean {
+                public static class FollowBean implements Serializable{
                     /**
                      * itemType : author
                      * itemId : 2763
@@ -718,7 +719,7 @@ public class VideoListBean {
                     }
                 }
 
-                public static class ShieldBean {
+                public static class ShieldBean implements Serializable{
                     /**
                      * itemType : author
                      * itemId : 2763
@@ -755,7 +756,7 @@ public class VideoListBean {
                 }
             }
 
-            public static class CoverBean {
+            public static class CoverBean implements Serializable{
                 /**
                  * feed : http://img.kaiyanapp.com/99c9f80cee5164044fb6341c939048a4.jpeg?imageMogr2/quality/60/format/jpg
                  * detail : http://img.kaiyanapp.com/99c9f80cee5164044fb6341c939048a4.jpeg?imageMogr2/quality/60/format/jpg
@@ -811,7 +812,7 @@ public class VideoListBean {
                 }
             }
 
-            public static class WebUrlBean {
+            public static class WebUrlBean implements Serializable{
                 /**
                  * raw : http://www.eyepetizer.net/detail.html?vid=96737
                  * forWeibo : http://www.eyepetizer.net/detail.html?vid=96737
@@ -837,7 +838,7 @@ public class VideoListBean {
                 }
             }
 
-            public static class TagsBean {
+            public static class TagsBean implements Serializable{
                 /**
                  * id : 777
                  * name : 动画电影
@@ -923,7 +924,7 @@ public class VideoListBean {
                 }
             }
 
-            public static class PlayInfoBean {
+            public static class PlayInfoBean implements Serializable{
                 /**
                  * height : 480
                  * width : 854
@@ -988,7 +989,7 @@ public class VideoListBean {
                     this.urlList = urlList;
                 }
 
-                public static class UrlListBean {
+                public static class UrlListBean implements Serializable{
                     /**
                      * name : aliyun
                      * url : http://baobab.kaiyanapp.com/api/v1/playUrl?vid=96737&resourceType=video&editionType=normal&source=aliyun
@@ -1050,7 +1051,7 @@ public class VideoListBean {
                 this.itemList = itemList;
             }
 
-            public static class ItemListBean {
+            public static class ItemListBean implements Serializable{
                 /**
                  * type : banner2
                  * data : {"dataType":"Banner","id":796,"title":"","description":"","image":"http://img.kaiyanapp.com/2ca238dfc04292f5fb41c321ed1eb0b4.jpeg?imageMogr2/quality/60/format/jpg","actionUrl":"eyepetizer://webview/?title=%E7%94%B5%E5%BD%B1%E6%94%BE%E6%98%A0%E5%AE%A4&url=http%3A%2F%2Fwww.eyepetizer.net%2Farticle.html%3Fnid%3D1157%26udid%3D%26uid%3D0%26utm_source%3Ddiscovery","adTrack":null,"shade":false,"label":{"text":"","card":"","detail":null},"labelList":[],"header":{"id":0,"title":null,"font":null,"subTitle":null,"subTitleFont":null,"textAlign":"left","cover":null,"label":null,"actionUrl":null,"labelList":null,"icon":null,"description":null}}
@@ -1105,7 +1106,7 @@ public class VideoListBean {
                     this.adIndex = adIndex;
                 }
 
-                public static class DataBean {
+                public static class DataBean implements Serializable{
                     /**
                      * dataType : Banner
                      * id : 796

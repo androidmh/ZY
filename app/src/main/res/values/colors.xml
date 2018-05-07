@@ -18,4 +18,7 @@
     <color name="tab_news_bg">#b9aeff</color>
     <color name="tab_img_bg">#EEE685</color>
     <color name="tab_videos_bg">#b2b2b2</color>
+    <color name="seatch_view_bg">#e5feff</color>
+    <!--Video-->
+    <color name="item_video_bg">#eff4ff</color>
 </resources>

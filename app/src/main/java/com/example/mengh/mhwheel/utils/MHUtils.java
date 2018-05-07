@@ -4,25 +4,10 @@ import android.app.Activity;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
-import java.math.BigInteger;
-import java.security.InvalidKeyException;
-import java.security.KeyFactory;
-import java.security.NoSuchAlgorithmException;
-import java.security.PrivateKey;
-import java.security.PublicKey;
-import java.security.spec.InvalidKeySpecException;
-import java.security.spec.RSAPrivateKeySpec;
-import java.security.spec.RSAPublicKeySpec;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 
 /**
  * Created by HMH on 2017/7/31.
@@ -37,15 +22,7 @@ public class MHUtils {
         return format;
     }
 
-    /**
-     * 秒转分+秒
-     */
 
-
-    public static String toMinute(int time){
-        String format = new SimpleDateFormat("mm:ss").format(new Date(time*1000));
-        return format;
-    }
     /*
     退出app
      */

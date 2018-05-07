@@ -10,8 +10,8 @@ import java.util.*
  * author HDM
  */
 
-class KTUtils {
-    companion object {
+object KTUtils {
+
         fun getETText(vararg editText: EditText): ArrayList<String> {
             val list: ArrayList<String> = ArrayList()
             for (et in editText) {
@@ -39,6 +39,38 @@ class KTUtils {
             }
             return true
         }
+
+    fun secToTime(time: Int): String {
+        var timeStr: String? = null
+        var hour = 0
+        var minute = 0
+        var second = 0
+        if (time <= 0)
+            return "00:00"
+        else {
+            minute = time / 60
+            if (minute < 60) {
+                second = time % 60
+                timeStr = unitFormat(minute) + ":" + unitFormat(second)
+            } else {
+                hour = minute / 60
+                if (hour > 99)
+                    return "99:59:59"
+                minute = minute % 60
+                second = time - hour * 3600 - minute * 60
+                timeStr = unitFormat(hour) + ":" + unitFormat(minute) + ":" + unitFormat(second)
+            }
+        }
+        return timeStr
+    }
+
+    private fun unitFormat(i: Int): String {
+        var retStr: String? = null
+        retStr = if (i in 0..9)
+            "0" + Integer.toString(i)
+        else
+            "" + i
+        return retStr
     }
 
 }

@@ -9,7 +9,9 @@ import com.example.mengh.mhwheel.videos.bean.VideoListBean
  */
 class VideoItem (itemType: Int, data: VideoListBean.ItemListBeanX?): MultiItemEntity{
     companion object {
+        //轮播图
         val IMG = 1
+        //列表
         val  LAYOUT= 2
     }
     private val data: VideoListBean.ItemListBeanX? = data

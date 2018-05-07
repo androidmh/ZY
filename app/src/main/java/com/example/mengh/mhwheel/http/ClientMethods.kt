@@ -49,8 +49,17 @@ object ClientMethods {
     fun getImgLoadmore(observer: DMObserver<ImageListBean>, page: Int, pagenum: Int, tag: String) {
         ApiSubscribe(Client.getClient(2).getImgList(page,pagenum,tag), observer)
     }
-    //加载更多图片
+    //获取视频列表
     fun getVideoList(observer: ProgressObserver<VideoListBean>, page: Int) {
         ApiSubscribe(Client.getClient(3).getVideoList(page), observer)
+    }
+
+    //加载更多视频
+    fun getVideoLoadmore(observer: DMObserver<VideoListBean>,url:String) {
+        ApiSubscribe(Client.getClient(1).getMoreVideoList(url), observer)
+    }
+    //搜索视频
+    fun getsearchVideo(observer: DMObserver<VideoListBean>,name:String) {
+        ApiSubscribe(Client.getClient(3).search(name,0,16), observer)
     }
 }

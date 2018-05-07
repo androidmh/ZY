@@ -31,9 +31,9 @@ class MainActivity : BaseActivity() {
             val ft = supportFragmentManager.beginTransaction()
             when (tabId) {
 
-                R.id.tab_index -> {
-                    ft.replace(R.id.ff, FragmentFactory.createFragment(0))
-                }
+//                R.id.tab_index -> {
+//                    ft.replace(R.id.ff, FragmentFactory.createFragment(0))
+//                }
                 R.id.tab_news -> {
                     ft.replace(R.id.ff, FragmentFactory.createFragment(1))
                 }

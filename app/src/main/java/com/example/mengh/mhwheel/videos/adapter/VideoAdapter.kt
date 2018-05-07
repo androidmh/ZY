@@ -3,11 +3,11 @@ package com.example.mengh.mhwheel.videos.adapter
 import android.widget.ImageView
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
+import com.example.hmh.gonlayout.utils.KTUtils
 import com.example.mengh.mhwheel.R
 import com.example.mengh.mhwheel.index.item.IndexItem
 import com.example.mengh.mhwheel.loader.GlideImageLoader
 import com.example.mengh.mhwheel.utils.GlideUtil
-import com.example.mengh.mhwheel.utils.MHUtils
 import com.example.mengh.mhwheel.videos.item.VideoItem
 import com.youth.banner.Banner
 import java.util.*
@@ -53,7 +53,7 @@ class VideoAdapter(data: MutableList<VideoItem>?) : BaseMultiItemQuickAdapter<Vi
                 }
                 helper.setText(R.id.tv_video_tag, tags)
                 val duration = item!!.getData()!!.data.duration
-                helper.setText(R.id.tv_time,MHUtils.toMinute(duration))
+                helper.setText(R.id.tv_time,KTUtils.secToTime(duration))
                 val iv_video = helper.getView<ImageView>(R.id.iv_video)
                 GlideUtil.LoadImg(mContext, item.getData()!!.data.cover.feed,iv_video)
             }

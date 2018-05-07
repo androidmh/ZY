@@ -81,6 +81,7 @@ class ImgListFragment : LazyLoadFragment(),ImgListContract.view{
         //判断如果数据不够便是到最后一页，没有更多数据了
         if (imglist.size < pagnum||imglist.size==0) {
             adapter.loadMoreEnd()
+            mactivity.showToast("没有更多数据了",3)
         } else {
             var list = imglist
             list.removeAt(pagnum)

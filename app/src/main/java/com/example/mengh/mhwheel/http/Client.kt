@@ -25,9 +25,9 @@ class Client {
             var baseUrl: String = ""
             if (type == 1) {
                 baseUrl = "https://api.xinwen.cn/news/"
-            } else if (type == 2){
+            } else if (type == 2) {
                 baseUrl = "http://image.baidu.com/channel/"
-            }else if (type == 3){
+            } else if (type == 3) {
                 baseUrl = "http://baobab.kaiyanapp.com/api/"
             }
             //时间戳

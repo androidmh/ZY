@@ -2,14 +2,40 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/tab_videos_bg"
+    >
+
+    <com.example.mengh.mhwheel.view.SearchView
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x70"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/x16"
+        android:background="@drawable/bg_search_shap"
+        android:gravity="center"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textColor="@color/seatch_view_bg"
+        app:textSize="12sp" />
+
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/sl_video"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_video"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/x10"
+        app:layout_constraintTop_toBottomOf="@+id/search_view">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </android.support.v4.widget.SwipeRefreshLayout>
 </android.support.constraint.ConstraintLayout>
