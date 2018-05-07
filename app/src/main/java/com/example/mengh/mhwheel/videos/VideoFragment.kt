@@ -112,6 +112,7 @@ class VideoFragment : BaseFragment(), VideoContract.view {
         //下拉刷新
         sl_video.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
             videoPresenter.getVideoList(pagnum)
+            search_view.setText("")
         })
         //上拉加载
         adapter.setOnLoadMoreListener(BaseQuickAdapter.RequestLoadMoreListener {
