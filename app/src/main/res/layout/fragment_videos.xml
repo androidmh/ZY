@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:textColor="@color/seatch_view_bg"
+        app:textColor="@color/textColor_black"
         app:textSize="12sp" />
 
     <android.support.v4.widget.SwipeRefreshLayout
