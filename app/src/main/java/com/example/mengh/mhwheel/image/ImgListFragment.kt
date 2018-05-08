@@ -1,6 +1,5 @@
 package com.example.mengh.mhwheel.image
 
-import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.GridLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.example.mengh.mhwheel.R
@@ -47,17 +46,17 @@ class ImgListFragment : LazyLoadFragment(),ImgListContract.view{
         adapter = ImageListAdapter(R.layout.item_imglist, imglist)
         val layoutManager = GridLayoutManager(mactivity, 2)
         rv_img.layoutManager = layoutManager
-        rv_img.adapter = adapter;
+        rv_img.adapter = adapter
         //item点击事件
-        adapter!!.setOnItemClickListener(BaseQuickAdapter.OnItemClickListener { adapter, view, position ->
+        adapter.onItemClickListener = BaseQuickAdapter.OnItemClickListener({ adapter, view, position ->
             ImgDialogFragment(imglist[position].image_url,imglist[position].thumbnail_url).show(fragmentManager, "imgdialog")
         })
         //下拉刷新
-        sl_img.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
+        sl_img.setOnRefreshListener( {
             imgListPresenter.getImgList(page, pagnum, tags)
         })
         //上拉加载
-        adapter.setOnLoadMoreListener(BaseQuickAdapter.RequestLoadMoreListener {
+        adapter.setOnLoadMoreListener( {
             page++
             imgListPresenter.loadMoreList(page, pagnum, tags)
 
@@ -70,11 +69,7 @@ class ImgListFragment : LazyLoadFragment(),ImgListContract.view{
     }
 
     override fun getLists(isshow: Boolean) {
-        if (isshow) {
-            sl_img.isRefreshing = true
-        } else {
-            sl_img.isRefreshing = false
-        }
+            sl_img.isRefreshing = isshow
     }
 
     override fun showMoreList(imglist: MutableList<ImageListBean.DataBean>) {
@@ -86,7 +81,7 @@ class ImgListFragment : LazyLoadFragment(),ImgListContract.view{
             var list = imglist
             list.removeAt(pagnum)
             adapter.addData(list)
-            adapter.loadMoreComplete();
+            adapter.loadMoreComplete()
         }
     }
 }

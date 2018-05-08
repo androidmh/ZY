@@ -21,17 +21,17 @@ class NewsAdapter(layoutResId: Int, data: MutableList<NewsBean.DataBean.News>) :
         try {
 
             if (item.thumbnail_img.size == 1) {
-                GlideUtil.LoadImg(mContext,item.thumbnail_img[0],iv_thumb)
+                GlideUtil.loadImg(mContext,item.thumbnail_img[0],iv_thumb)
                 iv_thumb2.visibility = View.GONE
                 iv_thumb3.visibility = View.GONE
             } else if (item.thumbnail_img.size == 2) {
                 iv_thumb3.visibility = View.GONE
-                GlideUtil.LoadImg(mContext,item.thumbnail_img[0],iv_thumb)
-                GlideUtil.LoadImg(mContext,item.thumbnail_img[1],iv_thumb2)
+                GlideUtil.loadImg(mContext,item.thumbnail_img[0],iv_thumb)
+                GlideUtil.loadImg(mContext,item.thumbnail_img[1],iv_thumb2)
             } else {
-                GlideUtil.LoadImg(mContext,item.thumbnail_img[0],iv_thumb)
-                GlideUtil.LoadImg(mContext,item.thumbnail_img[1],iv_thumb2)
-                GlideUtil.LoadImg(mContext,item.thumbnail_img[2],iv_thumb3)
+                GlideUtil.loadImg(mContext,item.thumbnail_img[0],iv_thumb)
+                GlideUtil.loadImg(mContext,item.thumbnail_img[1],iv_thumb2)
+                GlideUtil.loadImg(mContext,item.thumbnail_img[2],iv_thumb3)
 
             }
         } catch (e: Exception) {

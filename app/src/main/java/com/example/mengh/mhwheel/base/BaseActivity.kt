@@ -53,7 +53,6 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
 
     protected var layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mContext = this
@@ -72,7 +71,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
         initParms(bundle)
-        initView(this!!.mContextView!!)
+        initView(this.mContextView!!)
         setListener()
         //为每一个Activity添加管理
         ActivityManagerUtils.getInstance().addActivity(this@BaseActivity)
@@ -98,7 +97,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * [沉浸状态栏]
+     * 沉浸状态栏
      */
     private fun steepStatusBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -112,7 +111,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * [初始化参数]
+     * 初始化参数
      *
      * @param parms
      */
@@ -120,30 +119,21 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
 
 
     /**
-     * [绑定布局]
+     * 绑定布局
      *
      * @return
      */
     protected abstract val layoutId: Int
     /**
-     * [初始化控件]
+     * 初始化控件
      *
      * @param view
      */
     protected abstract fun initView(view: View)
 
-    /**
-     * [绑定控件]
-     *
-     * @param resId
-     * @return
-     */
-    protected fun <T : View> `$`(resId: Int): T {
-        return super.findViewById<View>(resId) as T
-    }
 
     /**
-     * [设置监听]
+     * 设置监听
      */
     protected abstract fun setListener()
 
@@ -157,7 +147,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     protected abstract fun widgetClick(v: View)
 
     /**
-     * [页面跳转]
+     * 页面跳转
      *
      * @param clz
      */
@@ -166,7 +156,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * [携带数据的页面跳转]
+     * 携带数据的页面跳转
      *
      * @param clz
      * @param bundle
@@ -181,7 +171,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * [含有Bundle通过Class打开编辑界面]
+     * 含有Bundle通过Class打开编辑界面
      *
      * @param cls
      * @param bundle
@@ -228,7 +218,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * [简化Toast]
+     * 简化Toast
      *
      * @param msg
      */
@@ -259,7 +249,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * [是否允许屏幕旋转]
+     * 是否允许屏幕旋转
      *
      * @param isAllowScreenRoate
      */
@@ -269,7 +259,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
 
 
     /**
-     * [是否允许全屏]
+     * 是否允许全屏
      *
      * @param allowFullScreen
      */
@@ -278,7 +268,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * [是否设置沉浸状态栏]
+     * 是否设置沉浸状态栏
      *
      * @param isSetStatusBar
      */

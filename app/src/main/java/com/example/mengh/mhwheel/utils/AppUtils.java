@@ -75,7 +75,7 @@ public class AppUtils {
     public static List<PackageInfo> getInstalledPackages(Context context) {
         PackageManager packageManager = getPackageManager(context);
         List<PackageInfo> packageInfos = packageManager.getInstalledPackages(0);
-        List<PackageInfo> packageInfoList = new ArrayList<PackageInfo>();
+        List<PackageInfo> packageInfoList = new ArrayList();
         for (int i = 0; i < packageInfos.size(); i++) {
             if ((packageInfos.get(i).applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0) {//系统应用
                 packageInfoList.add(packageInfos.get(i));
@@ -131,7 +131,7 @@ public class AppUtils {
     public static boolean isAvilible(Context context, String packageName) {
         final PackageManager packageManager = context.getPackageManager();//获取packagemanager
         List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);//获取所有已安装程序的包信息
-        List<String> pName = new ArrayList<String>();//用于存储所有已安装程序的包名
+        List<String> pName = new ArrayList<>();//用于存储所有已安装程序的包名
         //从pinfo中将包名字逐一取出，压入pName list中
         if (pinfo != null) {
             for (int i = 0; i < pinfo.size(); i++) {

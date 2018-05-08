@@ -7,10 +7,8 @@ import java.util.ArrayList
 import java.util.HashMap
 
 import okhttp3.FormBody
-import okhttp3.Headers
 import okhttp3.HttpUrl
 import okhttp3.Interceptor
-import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.Request
 import okhttp3.RequestBody

@@ -4,8 +4,6 @@
  * File Name:CustomActivityManager.java
  * Function: 自定义Activity堆栈管理器. <br/>
  * Description: 自定义Activity管理器，用来自定义维护手机Activity堆栈.方便一次性关闭对个界面 <br/>
- * Date:2014年9月29日下午6:51:56
- * Copyright:Copyright (c) 2014, 翔傲科技（上海）有限公司 All Rights Reserved.
  */
 package com.example.mengh.mhwheel.base;
 

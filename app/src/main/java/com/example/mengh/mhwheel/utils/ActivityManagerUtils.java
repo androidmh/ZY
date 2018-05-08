@@ -27,7 +27,7 @@ public class ActivityManagerUtils {
      * 打开的activity
      **/
 
-    private List<Activity> activities = new ArrayList<Activity>();
+    private List<Activity> activities = new ArrayList<>();
 
 
     /**

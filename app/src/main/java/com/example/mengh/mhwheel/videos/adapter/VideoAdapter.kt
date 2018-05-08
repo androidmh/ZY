@@ -42,20 +42,20 @@ class VideoAdapter(data: MutableList<VideoItem>?) : BaseMultiItemQuickAdapter<Vi
             }
             IndexItem.LAYOUT -> {
                 helper.setText(R.id.tv_collection, item!!.getData()!!.data.consumption.collectionCount.toString())
-                helper.setText(R.id.tv_share, item!!.getData()!!.data.consumption.shareCount.toString())
-                helper.setText(R.id.tv_reply, item!!.getData()!!.data.consumption.replyCount.toString())
-                helper.setText(R.id.tv_video_title, item!!.getData()!!.data.title)
-                var tags :StringBuilder= StringBuilder()
-                for (tag in item!!.getData()!!.data.tags) {
+                helper.setText(R.id.tv_share, item.getData()!!.data.consumption.shareCount.toString())
+                helper.setText(R.id.tv_reply, item.getData()!!.data.consumption.replyCount.toString())
+                helper.setText(R.id.tv_video_title, item.getData()!!.data.title)
+                var tags = StringBuilder()
+                for (tag in item.getData()!!.data.tags) {
 
                     tags.append("  #${tag.name}")
 
                 }
                 helper.setText(R.id.tv_video_tag, tags)
-                val duration = item!!.getData()!!.data.duration
+                val duration = item.getData()!!.data.duration
                 helper.setText(R.id.tv_time,KTUtils.secToTime(duration))
                 val iv_video = helper.getView<ImageView>(R.id.iv_video)
-                GlideUtil.LoadImg(mContext, item.getData()!!.data.cover.feed,iv_video)
+                GlideUtil.loadImg(mContext, item.getData()!!.data.cover.feed,iv_video)
             }
         }
     }

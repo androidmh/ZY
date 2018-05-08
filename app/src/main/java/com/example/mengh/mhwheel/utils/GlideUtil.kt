@@ -26,7 +26,7 @@ object GlideUtil {
      * @param imageView 加载imageview
      * 普通加载图片
      */
-    fun LoadImg(activity: Context, url: String, imageView: ImageView) {
+    fun loadImg(activity: Context, url: String, imageView: ImageView) {
         GlideApp.with(activity)
                 .load(url)
                 .apply(options)
@@ -40,7 +40,7 @@ object GlideUtil {
      * @param imageView 加载imageview
      * 模糊加载图片
      */
-    fun LoadvagueImg(activity: Context, url: String, imageView: ImageView) {
+    fun loadvagueImg(activity: Context, url: String, imageView: ImageView) {
         GlideApp.with(activity)
                 .load(url)
                 .apply(options)

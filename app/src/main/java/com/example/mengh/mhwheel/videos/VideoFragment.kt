@@ -2,7 +2,6 @@ package com.example.mengh.mhwheel.videos
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.text.TextUtils
 import android.view.View
@@ -45,7 +44,7 @@ class VideoFragment : BaseFragment(), VideoContract.view {
 
     override fun doBusiness(mContext: Context?) {
         //实例化presenter
-        videoPresenter = VideoPresenter(this, this!!.mactivity!!)
+        videoPresenter = VideoPresenter(this, this.mactivity!!)
         //获取视频集合
         videoPresenter.getVideoList(pagnum)
         //处理searchview搜索点击事件
@@ -101,8 +100,8 @@ class VideoFragment : BaseFragment(), VideoContract.view {
         adapter = VideoAdapter(data)
         val layoutManager = LinearLayoutManager(mactivity)
         rv_video.layoutManager = layoutManager
-        rv_video.adapter = adapter;
-        adapter.setOnItemClickListener(BaseQuickAdapter.OnItemClickListener { adapter, view, position ->
+        rv_video.adapter = adapter
+        adapter.onItemClickListener = BaseQuickAdapter.OnItemClickListener({ adapter, view, position ->
             //跳转到播放视频的页面并把数据携带过去 ps：注意携带数据中的不管有多少层对象都要序列化
             var bundle = Bundle()
             bundle.putSerializable(VIDEO_KEY, data[position].getData())
@@ -110,12 +109,12 @@ class VideoFragment : BaseFragment(), VideoContract.view {
         })
 
         //下拉刷新
-        sl_video.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
+        sl_video.setOnRefreshListener( {
             videoPresenter.getVideoList(pagnum)
             search_view.setText("")
         })
         //上拉加载
-        adapter.setOnLoadMoreListener(BaseQuickAdapter.RequestLoadMoreListener {
+        adapter.setOnLoadMoreListener({
             videoPresenter.loadMoreList(pageurl)
         }, rv_video)
     }
@@ -136,7 +135,7 @@ class VideoFragment : BaseFragment(), VideoContract.view {
                 adapter.addData(VideoItem(VideoItem.LAYOUT, itemListBeanX))
             }
             pageurl = videobean.nextPageUrl
-            adapter.loadMoreComplete();
+            adapter.loadMoreComplete()
         }
     }
 
@@ -153,11 +152,7 @@ class VideoFragment : BaseFragment(), VideoContract.view {
      * 设置SwipeRefreshLayout是否加载中
      */
     override fun getLists(isshow: Boolean) {
-        if (isshow) {
-            sl_video.isRefreshing = true
-        } else {
-            sl_video.isRefreshing = false
-        }
+            sl_video.isRefreshing = isshow
     }
 
     /**

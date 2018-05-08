@@ -1,12 +1,10 @@
 package com.example.mengh.mhwheel.utils;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.ContextThemeWrapper;
-import android.view.View;
 
 
 
@@ -45,7 +43,7 @@ public class DialogUtil {
 
     public static AlertDialog getAlertDialog(Context context, String title, String msg, String commitName,
                                              String cancelName, DialogInterface.OnClickListener onClick) {
-        AlertDialog alert = null;
+        AlertDialog alert;
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(title);
         builder.setMessage(msg);
@@ -63,7 +61,7 @@ public class DialogUtil {
 
     public static AlertDialog getAlertDialog(Context context, String title, String msg, String commitName,
                                              String cancelName, DialogInterface.OnClickListener onClick, DialogInterface.OnClickListener oncanClick) {
-        AlertDialog alert = null;
+        AlertDialog alert;
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(title);
         builder.setMessage(msg);
@@ -92,14 +90,6 @@ public class DialogUtil {
         return alert;
     }
 
-
-    public static Dialog getDialog(Context context, View view) {
-        final Dialog dialog = new AlertDialog.Builder(context).create();
-        dialog.setCancelable(false);
-        dialog.show();
-        dialog.getWindow().setContentView(view);
-        return dialog;
-    }
 
     public static ProgressDialog getProgressDialog(Context context, String msg) {
         return getProgressDialog(context, msg, false);

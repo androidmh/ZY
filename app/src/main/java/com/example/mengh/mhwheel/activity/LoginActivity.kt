@@ -14,6 +14,8 @@ import android.view.animation.LinearInterpolator
 import android.widget.Toast
 import com.example.mengh.mhwheel.R
 import com.example.mengh.mhwheel.base.BaseActivity
+import com.example.mengh.mhwheel.utils.NetworkAvailableUtils
+import com.example.mengh.mhwheel.utils.SnackBarUtil
 import com.vondear.rxtools.RxAnimationTool
 import com.vondear.rxtools.RxBarTool
 import com.vondear.rxtools.RxKeyboardTool
@@ -38,6 +40,10 @@ class LoginActivity : BaseActivity() {
         }
         screenHeight = this.resources.displayMetrics.heightPixels //获取屏幕高度
         keyHeight = screenHeight / 3//弹起高度为屏幕高度的1/3
+        val networkAvailable = NetworkAvailableUtils.isNetworkAvailable(this)
+        if (!networkAvailable) {
+            SnackBarUtil.show(rl_login, "当前无网络链接")
+        }
         initEvent()
     }
 
@@ -52,10 +58,10 @@ class LoginActivity : BaseActivity() {
             }
 
             override fun afterTextChanged(s: Editable) {
-                if (!TextUtils.isEmpty(s) && iv_clean_phone.getVisibility() == View.GONE) {
-                    iv_clean_phone.setVisibility(View.VISIBLE)
+                if (!TextUtils.isEmpty(s) && iv_clean_phone.visibility == View.GONE) {
+                    iv_clean_phone.visibility = View.VISIBLE
                 } else if (TextUtils.isEmpty(s)) {
-                    iv_clean_phone.setVisibility(View.GONE)
+                    iv_clean_phone.visibility = View.GONE
                 }
             }
         })
@@ -69,10 +75,10 @@ class LoginActivity : BaseActivity() {
             }
 
             override fun afterTextChanged(s: Editable) {
-                if (!TextUtils.isEmpty(s) && clean_password.getVisibility() == View.GONE) {
-                    clean_password.setVisibility(View.VISIBLE)
+                if (!TextUtils.isEmpty(s) && clean_password.visibility == View.GONE) {
+                    clean_password.visibility = View.VISIBLE
                 } else if (TextUtils.isEmpty(s)) {
-                    clean_password.setVisibility(View.GONE)
+                    clean_password.visibility = View.GONE
                 }
                 if (s.toString().isEmpty())
                     return
@@ -87,14 +93,14 @@ class LoginActivity : BaseActivity() {
         /**
          * 禁止键盘弹起的时候可以滚动
          */
-        scrollView.setOnTouchListener(View.OnTouchListener { v, event -> true })
+        scrollView.setOnTouchListener({ v, event -> true })
         scrollView.addOnLayoutChangeListener(object : View.OnLayoutChangeListener {
             override fun onLayoutChange(v: View, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
                 /* old是改变前的左上右下坐标点值，没有old的是改变后的左上右下坐标点值
               现在认为只要控件将Activity向上推的高度超过了1/3屏幕高，就认为软键盘弹起*/
                 if (oldBottom != 0 && bottom != 0 && oldBottom - bottom > keyHeight) {
-                    Log.e("wenzhihao", "up------>" + (oldBottom - bottom))
-                    val dist = content.getBottom() - bottom
+                    Log.e("huangdm", "up------>" + (oldBottom - bottom))
+                    val dist = content.bottom - bottom
                     if (dist > 0) {
                         val mAnimatorTranslateY = ObjectAnimator.ofFloat(content, "translationY", 0.0f, -dist.toFloat())
                         mAnimatorTranslateY.duration = 300
@@ -102,14 +108,14 @@ class LoginActivity : BaseActivity() {
                         mAnimatorTranslateY.start()
                         RxAnimationTool.zoomIn(logo, 0.6f, dist.toFloat())
                     }
-                    service.setVisibility(View.INVISIBLE)
+                    service.visibility = View.INVISIBLE
 
                 } else if (oldBottom != 0 && bottom != 0 && bottom - oldBottom > keyHeight) {
                     Log.e("wenzhihao", "down------>" + (bottom - oldBottom))
-                    if (content.getBottom() - oldBottom > 0) {
-                        val mAnimatorTranslateY = ObjectAnimator.ofFloat(content, "translationY", content.getTranslationY(), Float.MIN_VALUE)
-                        mAnimatorTranslateY.setDuration(300)
-                        mAnimatorTranslateY.setInterpolator(LinearInterpolator())
+                    if (content.bottom - oldBottom > 0) {
+                        val mAnimatorTranslateY = ObjectAnimator.ofFloat(content, "translationY", content.translationY, Float.MIN_VALUE)
+                        mAnimatorTranslateY.duration = 300
+                        mAnimatorTranslateY.interpolator = LinearInterpolator()
                         mAnimatorTranslateY.start()
                         //键盘收回后，logo恢复原来大小，位置同样回到初始位置
                         RxAnimationTool.zoomOut(logo, 0.6f)
@@ -119,7 +125,7 @@ class LoginActivity : BaseActivity() {
             }
         })
 
-        btn_login.setOnClickListener(View.OnClickListener { RxKeyboardTool.hideSoftInput(mContext) })
+        btn_login.setOnClickListener({ RxKeyboardTool.hideSoftInput(mContext) })
     }
 
     fun isFullScreen(activity: Activity): Boolean {
@@ -146,14 +152,14 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun showPsd() {
-        if (et_password.getInputType() != InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
-            et_password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+        if (et_password.inputType != InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+            et_password.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
             iv_show_pwd.setImageResource(R.drawable.pass_visuable)
         } else {
-            et_password.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+            et_password.inputType = (InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
             iv_show_pwd.setImageResource(R.drawable.pass_gone)
         }
-        val pwd = et_password.getText().toString()
+        val pwd = et_password.text.toString()
         if (!TextUtils.isEmpty(pwd))
             et_password.setSelection(pwd.length)
     }

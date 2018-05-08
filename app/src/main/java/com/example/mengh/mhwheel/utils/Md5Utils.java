@@ -26,6 +26,7 @@ public class Md5Utils {
             return sb.toString();
         }
         catch (Exception e) {
+            LogUtil.e(e.getMessage());
         }
         return "";
     }

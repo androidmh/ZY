@@ -2,7 +2,6 @@ package com.example.mengh.test.test
 
 import android.app.ProgressDialog
 import android.content.Context
-import android.content.DialogInterface
 import android.os.Handler
 import android.os.Message
 

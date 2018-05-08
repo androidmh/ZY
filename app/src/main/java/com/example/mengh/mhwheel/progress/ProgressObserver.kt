@@ -2,6 +2,8 @@ package com.example.mengh.test.test
 
 import android.util.Log
 import com.example.mengh.mhwheel.base.RefreshContract
+import com.example.mengh.test.test.ObserverOnNextListener
+import com.example.mengh.test.test.ProgressCancelListener
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 

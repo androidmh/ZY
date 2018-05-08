@@ -1,6 +1,5 @@
 package com.example.mengh.mhwheel.base
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -30,7 +29,7 @@ abstract class BaseFragment : Fragment(), View.OnClickListener {
         doBusiness(activity)
     }
     /**
-     * [业务操作]
+     * 业务操作
      *
      * @param mContext
      */
@@ -46,7 +45,7 @@ abstract class BaseFragment : Fragment(), View.OnClickListener {
 
 
     /**
-     * [防止快速点击]
+     * 防止快速点击
      *
      * @return
      */
@@ -60,7 +59,7 @@ abstract class BaseFragment : Fragment(), View.OnClickListener {
     }
 
     /**
-     * [页面跳转]
+     * 页面跳转
      *
      * @param clz
      */
@@ -69,7 +68,7 @@ abstract class BaseFragment : Fragment(), View.OnClickListener {
     }
 
     /**
-     * [携带数据的页面跳转]
+     * 携带数据的页面跳转
      *
      * @param clz
      * @param bundle

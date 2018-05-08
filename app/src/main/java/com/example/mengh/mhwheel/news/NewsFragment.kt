@@ -2,7 +2,6 @@ package com.example.mengh.mhwheel.news
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.arlib.floatingsearchview.FloatingSearchView
@@ -33,7 +32,7 @@ class NewsFragment : BaseFragment(), NewsContract.view, NewsContract.search {
 
 
     override fun doBusiness(mContext: Context?) {
-        newsPresenter = NewsPresenter(this, this!!.mactivity!!)
+        newsPresenter = NewsPresenter(this, this.mactivity!!)
         newsPresenter.getData()
         setSearch()
     }
@@ -60,12 +59,12 @@ class NewsFragment : BaseFragment(), NewsContract.view, NewsContract.search {
      */
     private fun setSearch() {
         //监听输入字符
-        search_view.setOnQueryChangeListener(FloatingSearchView.OnQueryChangeListener { oldQuery, newQuery ->
+        search_view.setOnQueryChangeListener( { oldQuery, newQuery ->
             if (oldQuery != "" && newQuery == "") run {
                 search_view.clearSuggestions()
             } else {
                 //设置加载进度
-                search_view.showProgress();
+                search_view.showProgress()
                 val search: NewsContract.search = object : NewsContract.search {
                     //实现模糊搜索的方法，动态检查测输入字符并搜索关键字
                     override fun showSearch(newsBean: MutableList<NewsBean.DataBean.News>) {
@@ -132,13 +131,13 @@ class NewsFragment : BaseFragment(), NewsContract.view, NewsContract.search {
         var adapter = NewsAdapter(R.layout.item_news_fragment, news)
         val layoutManager = LinearLayoutManager(mactivity)
         rv_news.layoutManager = layoutManager
-        rv_news.adapter = adapter;
-        adapter!!.setOnItemClickListener(BaseQuickAdapter.OnItemClickListener { adapter, view, position ->
+        rv_news.adapter = adapter
+        adapter.onItemClickListener = BaseQuickAdapter.OnItemClickListener({ adapter, view, position ->
             var bundle = Bundle()
             bundle.putString(KEY_NEWS, news[position].url)
             startActivityf(NewsActivity::class.java, bundle)
         })
-        sl_news.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener { newsPresenter.getData() })
+        sl_news.setOnRefreshListener( { newsPresenter.getData() })
     }
 
     override fun showfailemsg(str: String) {
@@ -146,11 +145,7 @@ class NewsFragment : BaseFragment(), NewsContract.view, NewsContract.search {
     }
 
     override fun getLists(isshow: Boolean) {
-        if (isshow) {
-            sl_news.isRefreshing = true
-        } else {
-            sl_news.isRefreshing = false
-        }
+        sl_news.isRefreshing = isshow
     }
 
 

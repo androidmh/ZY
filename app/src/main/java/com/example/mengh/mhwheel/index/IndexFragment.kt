@@ -36,7 +36,7 @@ class IndexFragment : BaseFragment() {
         val adapter = IndexAdapter(data)
         val layoutManager = LinearLayoutManager(mactivity)
         rv_index.layoutManager = layoutManager
-        rv_index.adapter = adapter;
+        rv_index.adapter = adapter
     }
 
     override fun widgetClick(v: View) {

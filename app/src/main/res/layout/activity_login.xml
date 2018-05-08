@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/root"
+    android:id="@+id/rl_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -35,7 +35,7 @@
         <LinearLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -65,7 +65,7 @@
                     android:text=""
                     android:textColor="@color/_9"
                     android:textColorHint="@color/_9"
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
 
                 <ImageView
                     android:id="@+id/iv_clean_phone"
@@ -107,7 +107,7 @@
                     android:text=""
                     android:textColor="@color/_9"
                     android:textColorHint="@color/_9"
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
 
                 <ImageView
                     android:id="@+id/clean_password"
@@ -139,7 +139,7 @@
                 android:background="@drawable/bg_btn_login_selected"
                 android:text="@string/login"
                 android:textColor="@color/white"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -148,14 +148,14 @@
 
                 <TextView
                     android:id="@+id/regist"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:text="注册新用户"
                     android:textColor="#b0b8b2"
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
 
                 <TextView
                     android:id="@+id/forget_password"
@@ -166,7 +166,7 @@
                     android:layout_marginLeft="21dp"
                     android:text="@string/login_forget_pwd"
                     android:textColor="#b0b8b2"
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -189,7 +189,7 @@
             android:layout_gravity="right"
             android:text="联系客服"
             android:textColor="#b0b8b2"
-            android:textSize="14dp"/>
+            android:textSize="14sp"/>
 
         <View
             android:layout_width="1dp"
@@ -204,7 +204,7 @@
             android:layout_gravity="right"
             android:text="关于我们"
             android:textColor="#b0b8b2"
-            android:textSize="14dp"/>
+            android:textSize="14sp"/>
     </LinearLayout>
 
 </RelativeLayout>

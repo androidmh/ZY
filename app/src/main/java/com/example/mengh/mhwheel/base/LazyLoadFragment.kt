@@ -2,11 +2,9 @@ package com.example.mengh.mhwheel.base
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 
 abstract class LazyLoadFragment : Fragment() {
     /**
@@ -14,7 +12,6 @@ abstract class LazyLoadFragment : Fragment() {
      */
     protected var isInit = false
     protected var isLoad = false
-    protected val TAG = "LazyLoadFragment"
     lateinit var mactivity:BaseActivity
     /**
      * 获取设置的布局
@@ -78,12 +75,6 @@ abstract class LazyLoadFragment : Fragment() {
 
     }
 
-    protected fun showToast(message: String) {
-        if (!TextUtils.isEmpty(message)) {
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
-        }
-
-    }
 
     /**
      * 设置Fragment要显示的布局
@@ -92,17 +83,6 @@ abstract class LazyLoadFragment : Fragment() {
      */
     protected abstract fun setContentView(): Int
 
-    /**
-     * 找出对应的控件
-     *
-     * @param id
-     * @param <T>
-     * @return
-    </T> */
-    protected fun <T : View> findViewById(id: Int): T {
-
-        return contentView!!.findViewById<View>(id) as T
-    }
 
     /**
      * 当视图初始化并且对用户可见的时候去真正的加载数据

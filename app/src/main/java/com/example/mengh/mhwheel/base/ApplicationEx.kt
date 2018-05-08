@@ -1,7 +1,6 @@
 package yuncha.dlz.com.yuncha.base
 
 import android.app.Application
-import android.content.Context
 import com.vondear.rxtools.RxTool
 import javax.net.ssl.HostnameVerifier
 import javax.net.ssl.SSLSession
@@ -56,7 +55,7 @@ class ApplicationEx : Application() {
         super.onCreate()
         application = this
         mApplication = this
-        RxTool.init(this);
+        RxTool.init(this)
 //        setDatabase()
     }
 
@@ -71,10 +70,6 @@ class ApplicationEx : Application() {
             //return hostname.equals("server.jeasonlzy.com");
             return true
         }
-    }
-
-    override fun attachBaseContext(base: Context) {
-        super.attachBaseContext(base)
     }
 
     /**

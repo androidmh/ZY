@@ -9,11 +9,12 @@
         android:id="@+id/iv_backgroud"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="-100dp"
-        android:layout_marginRight="-300dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginEnd="-300dp"
         android:src="@mipmap/banner1"
         android:scaleType="centerCrop"
-        />
+        android:layout_marginLeft="-100dp"
+        android:layout_marginRight="-300dp" />
 
 
 </FrameLayout>

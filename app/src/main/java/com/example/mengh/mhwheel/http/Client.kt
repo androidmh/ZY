@@ -22,7 +22,7 @@ class Client {
         fun getClient(type: Int): ClientService {
             //接口类
             var apiService: ClientService
-            var baseUrl: String = ""
+            var baseUrl = ""
             if (type == 1) {
                 baseUrl = "https://api.xinwen.cn/news/"
             } else if (type == 2) {

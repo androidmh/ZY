@@ -20,7 +20,7 @@ class DMAutoImageView : FrameLayout {
 
     internal var resId: Int = 0
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         //导入布局
@@ -53,12 +53,12 @@ class DMAutoImageView : FrameLayout {
         }
 
         if (resId != 0) {
-            mImageView!!.setImageResource(resId)
+            mImageView.setImageResource(resId)
         }
 
         Handler().postDelayed({
             val animation = AnimationUtils.loadAnimation(context, R.anim.translate_autoimg)
-            mImageView!!.startAnimation(animation)
+            mImageView.startAnimation(animation)
         }, 200)
     }
 }

@@ -9,9 +9,5 @@ package com.example.mengh.mhwheel.base
 interface ProjectConstant {
     companion object {
         val KEY_NEWS = "key_news"
-        val KEY_BATCHCODE = "batchcode"
-        val KEY_BATCHKEYID = "batchkeyid"
-        val KEY_PACKTYPE = "packtype"
-        val KEY_GTYPE = "gtype"
     }
 }

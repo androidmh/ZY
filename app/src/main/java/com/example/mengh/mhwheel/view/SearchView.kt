@@ -108,7 +108,7 @@ class SearchView(context: Context, attrs: AttributeSet) : android.support.v7.wid
         super.onAttachedToWindow()
         if (mDrawable == null) {
             try {
-                mDrawable = context.resources.getDrawable(R.drawable.ic_action_search_no_padding)
+                mDrawable = context.resources.getDrawable(R.mipmap.ic_action_search_no_padding)
                 mDrawable!!.setBounds(0, 0, searchSize.toInt(), searchSize.toInt())
             } catch (e: Exception) {
 

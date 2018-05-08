@@ -3,7 +3,6 @@ package com.example.mengh.mhwheel.factory
 import android.util.SparseArray
 import com.example.mengh.mhwheel.base.BaseFragment
 import com.example.mengh.mhwheel.image.ImageFragment
-import com.example.mengh.mhwheel.image.ImgListFragment
 import com.example.mengh.mhwheel.index.IndexFragment
 import com.example.mengh.mhwheel.news.NewsFragment
 import com.example.mengh.mhwheel.videos.VideoFragment

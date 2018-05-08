@@ -18,8 +18,7 @@ public class MHUtils {
     日期转换
      */
     public static String timeStrToSecond(Long time) {
-        String format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(time));
-        return format;
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(time));
     }
 
 
@@ -29,7 +28,7 @@ public class MHUtils {
     private static Boolean isExit = false;
 
     public static void exitBy2Click(Activity context) {
-        Timer tExit = null;
+        Timer tExit;
         if (!isExit) {
             isExit = true; // 准备退出
             Toast.makeText(context, "再按一次退出程序", Toast.LENGTH_SHORT).show();

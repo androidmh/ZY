@@ -37,9 +37,9 @@ class VideoActivity : BaseActivity() {
         //加载视频相关选项
         videoplayer.setUp(videobean.data.playUrl, JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL,videobean.data.title)
         //设置视频插图
-        GlideUtil.LoadvagueImg(this,videobean.data.cover.feed,videoplayer.thumbImageView)
+        GlideUtil.loadvagueImg(this,videobean.data.cover.feed,videoplayer.thumbImageView)
         //加载底部浮动图片
-        GlideUtil.LoadImg(this,videobean.data.cover.feed, iv_auto.getmImageView()!!)
+        GlideUtil.loadImg(this,videobean.data.cover.feed, iv_auto.getmImageView()!!)
         //设置视频标题
         tv_title.text = videobean.data.title
         //设置视频介绍
@@ -56,14 +56,14 @@ class VideoActivity : BaseActivity() {
     override fun onPause() {
         super.onPause()
         if (JZVideoPlayer.backPress()) {
-            return;
+            return
         }
         JZVideoPlayer.releaseAllVideos()
     }
 
     override fun onBackPressed() {
         if (JZVideoPlayer.backPress()) {
-            return;
+            return
         }
         super.onBackPressed()
     }
