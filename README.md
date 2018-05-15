@@ -15,4 +15,4 @@
 ```
 新闻页
 ```
-<img src="dmimg/dm01.png" width="25%"> <img src="dmimg/dm02.png" width="25%"> <img src="dmimg/dm03.png" width="25%"> <img src="dmimg/dm04.png" width="25%">
+<img src="dmimg/dm01.png" width="22%"> <img src="dmimg/dm02.png" width="22%"> <img src="dmimg/dm03.png" width="22%"> <img src="dmimg/dm04.png" width="22%">
