@@ -17,12 +17,12 @@
 ```
 <table>
     <tr>
-        <td><img src="dmimg/dm01.png" width="30%"></td>
-        <td><img src="dmimg/dm02.png" width="30%"></td>
+        <td><img src="dmimg/dm01.png"></td>
+        <td><img src="dmimg/dm02.png"></td>
     </tr>
   <tr>
-        <td><img src="dmimg/dm03.png" width="30%"></td>
-        <td> <img src="dmimg/dm04.png" width="30%"></td>
+        <td><img src="dmimg/dm03.png"></td>
+        <td> <img src="dmimg/dm04.png"></td>
     </tr>
 </table>
  
