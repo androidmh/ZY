@@ -83,4 +83,5 @@
 [点击下载](https://github.com/androidmh/DM/raw/master/apk/dm.apk)
 <br/>
 扫码下载
+<br/>
 <img src="dmimg/qr_apk.png">
