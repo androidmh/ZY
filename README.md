@@ -78,3 +78,7 @@
 <br/>
 11.[videoplayer](https://github.com/lipangit/JiaoZiVideoPlayer) 视频播放器
 <br/>
+
+### APK
+[点击下载](https://github.com/androidmh/DM/raw/master/apk/dm.apk)
+
