@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginTop="@dimen/x10"
     android:layout_marginLeft="@dimen/x10"
     android:layout_marginRight="@dimen/x10"
@@ -29,7 +30,9 @@
             android:maxLines="2"
             android:textSize="@dimen/x30"
             android:textColor="@color/textColor_black"
-            android:text="文章的标题文章的标题文章的标题文章的标题文章的标题"/>
+            android:text=""
+            tools:text="文章的标题文章的标题文章的标题文章的标题文章的标题"
+            />
 
 
         <LinearLayout
@@ -75,7 +78,8 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@id/llayout"
             android:textSize="@dimen/x20"
-            android:text="aaaaa" />
+            tools:text="来源:aaaaa"
+            />
 
         <TextView
             android:id="@+id/tv_newstime"
@@ -85,7 +89,8 @@
             android:layout_marginLeft="@dimen/x24"
             android:layout_toRightOf="@id/tv_sourceName"
             android:textSize="@dimen/x20"
-            android:text="aaaaa" />
+            tools:text="日期:aaaaa"
+            />
 
 
     </RelativeLayout>

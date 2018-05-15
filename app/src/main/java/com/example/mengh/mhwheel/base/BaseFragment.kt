@@ -39,8 +39,12 @@ abstract class BaseFragment : Fragment(), View.OnClickListener {
     abstract fun widgetClick(v: View)
 
     override fun onClick(v: View) {
-        if (fastClick())
+        if (!isFastClick(1000)) {
             widgetClick(v)
+        } else {
+            mactivity!!.showToast("请勿重复点击", 4)
+            return
+        }
     }
 
 
@@ -49,13 +53,18 @@ abstract class BaseFragment : Fragment(), View.OnClickListener {
      *
      * @return
      */
-    private fun fastClick(): Boolean {
-        var lastClick: Long = 0
-        if (System.currentTimeMillis() - lastClick <= 1000) {
-            return false
+    private var lastClickTime: Long = 0
+
+    private fun isFastClick(millisecond: Int): Boolean {
+        val curClickTime = System.currentTimeMillis()
+        val interval = curClickTime - lastClickTime
+
+        if (0 < interval && interval < millisecond) {
+            // 超过点击间隔后再将lastClickTime重置为当前点击时间
+            return true
         }
-        lastClick = System.currentTimeMillis()
-        return true
+        lastClickTime = curClickTime
+        return false
     }
 
     /**

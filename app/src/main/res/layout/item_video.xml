@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/x8"
     app:cardElevation="@dimen/x8">
 
     <RelativeLayout
-        android:background="@color/item_video_bg"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/x220"
+        android:background="@color/item_video_bg"
         android:padding="@dimen/x20">
 
         <ImageView
             android:id="@+id/iv_video"
             android:layout_width="@dimen/x250"
             android:layout_height="@dimen/x200"
-            android:scaleType="fitXY"
-             />
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/tv_time"
@@ -26,10 +26,10 @@
             android:layout_alignBottom="@+id/iv_video"
             android:layout_alignRight="@+id/iv_video"
             android:background="@drawable/btn_shap_time"
-            android:text="02:28"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="02:28" />
 
         <TextView
             android:id="@+id/tv_video_title"
@@ -37,15 +37,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/x50"
             android:layout_toRightOf="@id/iv_video"
-            android:text="标题标题标题标题标题标题"
-            android:textColor="@color/textColor_black" />
+            android:textColor="@color/textColor_black"
+            tools:text="标题标题标题标题标题标题" />
 
         <ImageView
             android:id="@+id/iv_tag"
             android:layout_width="@dimen/x30"
             android:layout_height="@dimen/x30"
-            android:layout_marginLeft="@dimen/x50"
             android:layout_below="@+id/tv_video_title"
+            android:layout_marginLeft="@dimen/x50"
             android:layout_marginTop="@dimen/x50"
             android:layout_toRightOf="@id/iv_video"
             android:background="@mipmap/tag" />
@@ -54,12 +54,12 @@
             android:id="@+id/tv_video_tag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/x5"
             android:layout_alignTop="@+id/iv_tag"
+            android:layout_marginLeft="@dimen/x5"
             android:layout_toRightOf="@id/iv_tag"
             android:singleLine="true"
             android:textSize="11sp"
-            android:text="标签标签标签标签标签标签标签" />
+            tools:text="标签标签标签标签标签标签标签" />
 
         <ImageView
             android:id="@+id/iv_collection"
@@ -77,7 +77,7 @@
             android:layout_alignTop="@+id/iv_collection"
             android:layout_marginLeft="@dimen/x10"
             android:layout_toRightOf="@id/iv_collection"
-            android:text="222" />
+            tools:text="222" />
 
         <ImageView
             android:id="@+id/iv_share"
@@ -95,7 +95,7 @@
             android:layout_alignTop="@+id/iv_collection"
             android:layout_marginLeft="@dimen/x10"
             android:layout_toRightOf="@id/iv_share"
-            android:text="333" />
+            tools:text="333" />
 
         <ImageView
             android:id="@+id/iv_reply"
@@ -113,7 +113,7 @@
             android:layout_alignTop="@+id/iv_collection"
             android:layout_marginLeft="@dimen/x10"
             android:layout_toRightOf="@id/iv_reply"
-            android:text="666" />
+            tools:text="666" />
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>

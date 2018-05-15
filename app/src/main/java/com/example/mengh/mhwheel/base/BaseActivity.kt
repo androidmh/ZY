@@ -124,6 +124,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
      * @return
      */
     protected abstract val layoutId: Int
+
     /**
      * 初始化控件
      *
@@ -138,7 +139,32 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener {
     protected abstract fun setListener()
 
     override fun onClick(v: View) {
-        widgetClick(v)
+        if (!isFastClick(1000)) {
+            widgetClick(v)
+        } else {
+            showToast("请勿重复点击", 4)
+            return
+        }
+    }
+
+
+    /**
+     * 防止快速点击
+     *
+     * @return
+     */
+    private var lastClickTime: Long = 0
+
+    private fun isFastClick(millisecond: Int): Boolean {
+        val curClickTime = System.currentTimeMillis()
+        val interval = curClickTime - lastClickTime
+
+        if (0 < interval && interval < millisecond) {
+            // 超过点击间隔后再将lastClickTime重置为当前点击时间
+            return true
+        }
+        lastClickTime = curClickTime
+        return false
     }
 
     /**
