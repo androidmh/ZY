@@ -16,5 +16,4 @@
 新闻页
 ```
 <img src="dmimg/dm01.png" width="48%"> <img src="dmimg/dm02.png" width="48%">
-<span/>
 <img src="dmimg/dm03.png" width="48%"> <img src="dmimg/dm04.png" width="48%">
