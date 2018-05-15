@@ -56,6 +56,25 @@
 ---
 
 ## 库文件
-1.[Gson](https://github.com/google/gson) 
+1.[Gson](https://github.com/google/gson) json解析库
 <br/>
-2.[Gson](https://github.com/google/gson) 
+2.[RxTools](https://github.com/vondear/RxTools) 工具类库
+<br/>
+3.[Bottombar](https://github.com/roughike/BottomBar) 底部导航栏
+<br/>
+4.[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper) 通用适配器，功能强大
+<br/>
+5.[banner](https://github.com/youth5201314/banner) 轮播
+<br/>
+6.[retrofit](https://github.com/square/retrofit) 联网库
+<br/>
+7.[rxandroid](https://github.com/ReactiveX/RxAndroid) RxAndroid
+<br/>
+8.[rxjava](https://github.com/ReactiveX/RxJava) RxJava
+<br/>
+9.[glide](https://github.com/bumptech/glide) 图片加载
+<br/>
+10.[searchview](https://github.com/arimorty/floatingsearchview) 搜索栏
+<br/>
+11.[videoplayer](https://github.com/lipangit/JiaoZiVideoPlayer) 视频播放器
+<br/>
