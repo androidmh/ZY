@@ -15,41 +15,41 @@
 ```
 新闻页
 ```
-<table>
-    <tr>
-        <td><img src="dmimg/dm01.png"></td>
-        <td><img src="dmimg/dm02.png"></td>
-    </tr>
+<table style="height: 300px">
   <tr>
-        <td><img src="dmimg/dm03.png"></td>
-        <td> <img src="dmimg/dm04.png"></td>
-    </tr>
+    <td><img src="dmimg/dm01.png"></td>
+    <td><img src="dmimg/dm02.png"></td>
+  </tr>
+  <tr>
+    <td><img src="dmimg/dm03.png"></td>
+    <td> <img src="dmimg/dm04.png"></td>
+  </tr>
 </table>
- 
+
 ```
 图片页
 ```
-<table>
-    <tr>
-        <td><img src="dmimg/dm05.png"></td>
-        <td><img src="dmimg/dm06.png"></td>
-    </tr>
+<table style="height: 300px">
   <tr>
-        <td><img src="dmimg/dm07.png"></td>
-        <td> <img src="dmimg/dm08.png"></td>
-    </tr>
+    <td><img src="dmimg/dm05.png"></td>
+    <td><img src="dmimg/dm06.png"></td>
+  </tr>
+  <tr>
+    <td><img src="dmimg/dm07.png"></td>
+    <td> <img src="dmimg/dm08.png"></td>
+  </tr>
 </table>
 
 ```
 视频页
 ```
-<table>
-    <tr>
-        <td><img src="dmimg/dm09.png"></td>
-        <td><img src="dmimg/dm10.png"></td>
-    </tr>
+<table style="height: 300px">
   <tr>
-        <td><img src="dmimg/dm11.png"></td>
-        <td> <img src="dmimg/dm12.png"></td>
-    </tr>
+    <td><img src="dmimg/dm09.png"></td>
+    <td><img src="dmimg/dm10.png"></td>
+  </tr>
+  <tr>
+    <td><img src="dmimg/dm11.png"></td>
+    <td> <img src="dmimg/dm12.png"></td>
+  </tr>
 </table>
