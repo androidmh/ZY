@@ -82,6 +82,9 @@
 ### APK
 [点击下载](https://github.com/androidmh/DM/raw/master/apk/dm.apk)
 <br/>
-扫码下载
+              扫码下载
 <br/>
 <img src="dmimg/qr_apk.png">
+
+### 免责声明
+接口是抓取网络数据，仅用于非商业用途，如做为商业使用，请自行联系接口提供方。出现任何本人概不负责。
