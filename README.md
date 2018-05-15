@@ -18,3 +18,17 @@
 <img src="dmimg/dm01.png" width="30%"> <img src="dmimg/dm02.png" width="30%">
 <br/>
 <img src="dmimg/dm03.png" width="30%"> <img src="dmimg/dm04.png" width="30%">
+
+```
+图片页
+```
+<img src="dmimg/dm05.png" width="30%"> <img src="dmimg/dm06.png" width="30%">
+<br/>
+<img src="dmimg/dm07.png" width="30%"> <img src="dmimg/dm08.png" width="30%">
+
+```
+视频页
+```
+<img src="dmimg/dm09.png" width="30%"> <img src="dmimg/dm10.png" width="30%">
+<br/>
+<img src="dmimg/dm11.png" width="30%"> <img src="dmimg/dm12.png" width="30%">
