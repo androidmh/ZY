@@ -13,7 +13,7 @@
 
 ## 项目预览
 ```
-新闻页
+<h5>新闻页</h5>
 ```
 <table style="height: 300px">
   <tr>
@@ -29,7 +29,7 @@
 ```
 图片页
 ```
-<table style="height: 300px">
+<table>
   <tr>
     <td><img src="dmimg/dm05.png"></td>
     <td><img src="dmimg/dm06.png"></td>
