@@ -29,13 +29,27 @@
 ```
 图片页
 ```
-<img src="dmimg/dm05.png" width="30%"> <img src="dmimg/dm06.png" width="30%">
-<br/>
-<img src="dmimg/dm07.png" width="30%"> <img src="dmimg/dm08.png" width="30%">
+<table>
+    <tr>
+        <td><img src="dmimg/dm05.png"></td>
+        <td><img src="dmimg/dm06.png"></td>
+    </tr>
+  <tr>
+        <td><img src="dmimg/dm07.png"></td>
+        <td> <img src="dmimg/dm08.png"></td>
+    </tr>
+</table>
 
 ```
 视频页
 ```
-<img src="dmimg/dm09.png" width="30%"> <img src="dmimg/dm10.png" width="30%">
-<br/>
-<img src="dmimg/dm11.png" width="30%"> <img src="dmimg/dm12.png" width="30%">
+<table>
+    <tr>
+        <td><img src="dmimg/dm09.png"></td>
+        <td><img src="dmimg/dm10.png"></td>
+    </tr>
+  <tr>
+        <td><img src="dmimg/dm11.png"></td>
+        <td> <img src="dmimg/dm12.png"></td>
+    </tr>
+</table>
